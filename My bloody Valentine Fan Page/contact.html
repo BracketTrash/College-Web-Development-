@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>My Bloody Valentine</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href="css/owl.carousel.min.css" rel="stylesheet" type="text/css">
+  <link href="css/owl.theme.default.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/parallax.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-lightbox/0.7.0/bootstrap-lightbox.min.js"></script>
+  <script src="js/mbv.js"></script>
+  <script src="js/owl.carousel.js"></script>
+</head>
+
+<body>
+    <div class="datestyle">
+      <h1>Show Current Date</h1>
+        <input type="button" id="btn1" value="Get Date (DD/MM/YYYY)"/>
+        <input type="button" id="btn2" value="Get Date (MM/DD/YYYY)"/>
+        <input type="button" id="btn3" value="Get Date (DD MON YYYY)"/>
+          <p id="printDate"></p>
+    </div>
+
+    <img id="homehead" src="images/header.jpg" alt="head">
+
+	<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">The Dunbrody Famine Ship</a>
+    </div>
+   <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Contact</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Gallery</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="contact.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="parallax-window" data-parallax="scroll" data-image-src="images/background.jpg">
+<div class="bb">
+<form class="cmxform" id="commentForm" method="get">
+  <fieldset>
+    <legend class="bb">Please provide your name, email address and age</legend>
+    <p>
+      <label for="cname">Name (required, at least 2 characters)</label>
+      <input id="cname" name="name" minlength="2" type="text" required>
+    </p>
+    <p>
+      <label for="csurname">Surname (required, at least 2 characters)</label>
+      <input id="csurname" name="surname" minlength="2" type="text" required>
+    </p>
+    <p>
+      <label for="cemail">E-Mail (required)</label>
+      <input id="cemail" type="email" name="email" required>
+    </p>
+    <p>
+      <label for="cphonenumber">age</label>
+      <input id="cphonenumber" type="Number" name="phonenumber">
+    </p>
+    <p>
+      <input class="submit" type="submit" value="Submit">
+    </p>
+  </fieldset>
+</form>
+<script>
+$("#commentForm").validate();
+</script>
+</div>
+</div>
+
+<br><br>
+<div class="bb">
+<p>Enter a number and click OK:</p>
+
+<input id="id1" type="number" min="100" max="200" required>
+<button onclick="myFunction()">OK</button>
+
+<p>To enter the draw to win an album please guess a number between 0 and 200</p>
+
+<p id="demo"></p>
+
+</div>
+</body>

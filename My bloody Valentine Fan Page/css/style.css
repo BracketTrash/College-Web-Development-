@@ -1,0 +1,93 @@
+body{
+    background-image: url("../images/background.jpg");
+    background-size: auto;
+    background-color: #ff3385;
+    background-attachment: fixed;
+
+}
+
+header{
+	text-align: center;
+}
+
+#homehead{
+    width: 100%;
+}
+
+h2{
+	text-align: center;
+	text-decoration: underline;
+}
+ 
+#site { overflow-x: hidden; }
+
+ #background {
+    position: relative;
+    overflow: hidden;
+}
+
+#background h1 {
+    padding: 200px;
+    position: relative;
+    z-index: 2;
+} 
+
+#background img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0.6;
+}
+
+.bandabout{
+    background-color: white;
+    text-align: center;
+    border-radius: .5em;
+    height: 47em;
+}
+
+.lightboxcentering{
+    text-align: center;
+}
+
+.toggler {
+ width: 500px; height: 200px; position: relative; }
+
+ #button { 
+ padding: .5em 1em; text-decoration: none; }
+ 
+ #effect {
+ padding: 0.4em; position: relative; }
+ 
+ #effect h3 {
+ margin: 0; padding: 0.4em; text-align: center; }
+
+ .ui-effects-transfer {
+ border: 2px dotted gray; }
+
+#wrapper{
+   width: 1170px
+   margin: 0 auto; 
+}
+
+.slidepics{
+   width: 100%; 
+}
+
+.datestyle{
+    text-align: center;
+}
+
+#btn1, #btn2, #btn3{
+    color: #ff0080;
+    background-color:   #262626;
+    border-color:   #262626;
+    border-radius: 0.35em;
+}
+
+.bb{
+    background-color: #262626;
+    color: #ff0080;
+}

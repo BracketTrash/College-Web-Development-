@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>My Bloody Valentine</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href="css/owl.carousel.min.css" rel="stylesheet" type="text/css">
+  <link href="css/owl.theme.default.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/parallax.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-lightbox/0.7.0/bootstrap-lightbox.min.js"></script>
+  <script src="js/mbv.js"></script>
+  <script src="js/owl.carousel.js"></script>
+</head>
+
+<body>
+<div class="datestyle">
+<h1>Show Current Date</h1>
+    <input type="button" id="btn1" value="Get Date (DD/MM/YYYY)"/>
+    <input type="button" id="btn2" value="Get Date (MM/DD/YYYY)"/>
+    <input type="button" id="btn3" value="Get Date (DD MON YYYY)"/>
+    <p id="printDate"></p>
+</div>
+
+   <img id="homehead" src="images/header.jpg" alt="head">
+	 <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">My Bloody Valentine</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Gallery</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Gallery</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="contact.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="lightboxcentering">
+  <div class="container">
+    <h2>Image Gallery</h2>
+  </div>
+  <a data-toggle="lightbox" href="#galleryLightbox">
+    <img src="images/img5.jpg" alt="lightbxpic" class="small-img">
+  </a>
+  <div id="galleryLightbox" class="lightbox fade"  tabindex="-1" role="dialog" aria-hidden="true">
+    <div class='lightbox-dialog'>
+        <div class='lightbox-content'>
+            <img src="images/img5.jpg" alt="lightboxpic">
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="bb">
+<h2>Drag/swipe to the left to scroll</h2>
+
+<div id="owl-container">
+<div class="owl-carousel owl-theme">
+  <div class="item">
+     <img src="images/img1.jpg" class="img-fluid" alt="12" style="height:21em;">
+  </div>
+  <div class="item">
+     <img src="images/img2.jpg" class="img-fluid" alt="12" style="height:21em;"> 
+  </div>
+  <div class="item"> 
+     <img src="images/img4.jpg" class="img-fluid" alt="12" style="height:21em;"> 
+  </div>
+  <div class="item"> 
+     <img src="images/img6.jpg" class="img-fluid" alt="12" style="height:21em;"> 
+  </div>
+  <div class="item"> 
+     <img src="images/img8.jpg" class="img-fluid" alt="12"> 
+  </div>
+  <div class="item"> 
+     <img src="images/img9.jpg" class="img-fluid" alt="12"> 
+  </div>
+  <div class="item"> 
+     <img src="images/img10.jpg" class="img-fluid" alt="12"> 
+  </div>
+</div>
+</div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/owl.carousel.js"></script>
+<script>
+  
+$('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+            nav:true
+        },
+        600:{
+            items:3,
+            nav:false
+        },
+        1000:{
+            items:5,
+            nav:true,
+            loop:false
+        }
+    }
+})
+
+</script>
+</body>
+</html>
