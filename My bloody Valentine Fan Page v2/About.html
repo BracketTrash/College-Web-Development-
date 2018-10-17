@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Bloody Valentine</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/parallax.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/mbv.js"></script>
+
+</head>
+<body>
+
+    <div class="datestyle">
+        <h1>Show Current Date</h1>
+        <input type="button" id="btn1" value="Get Date (DD/MM/YYYY)" />
+        <input type="button" id="btn2" value="Get Date (MM/DD/YYYY)" />
+        <input type="button" id="btn3" value="Get Date (DD MON YYYY)" />
+        <p id="printDate"></p>
+    </div>
+
+    <div class="parallax-window" data-parallax="scroll" data-image-src="images/background.jpg">
+
+        <img id="homehead" src="images/header.jpg" alt="head">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">My Bloody Valentine</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">About</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Gallery</a></li>
+                    <li><a href="About.html">About</a></li>
+                     <li><a href="Buy Albums.html">Buy Albums</a></li>
+                    <li><a href="contact.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="parallax-window" data-parallax="scroll" data-image-src="images/background.jpg">
+        <div id="About">
+            <div class="jumbotron">
+                <div class="container">
+                    <h1 class="display-3">My Bloody Valentine</h1>
+                    <p> My Bloody Valentine are a rock band formed in Dublin in 1983. Since 1987, the band's lineup has consisted of founding members Kevin Shields (vocals, guitar, sampler) and Colm Ó Cíosóig (drums, sampler), with Bilinda Butcher (vocals, guitar) and Debbie Googe (bass). Their music is best known for its blend of dissonant guitar textures with ethereal melody and unorthodox production techniques, and helped to pioneer the genre known as shoegazing during the late 1980s and early 1990s.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+
+                    <div class="bandabout">
+                        <h2>Style</h2>
+                        <p id="Style">My Bloody Valentine's musical style progressed throughout their career. The band were originally influenced by post-punk, in particular The Birthday Party, The Cramps and Joy Division, and as author Mike McGonial noted, "brought together the least interesting elements" of their influences. Their debut mini album, This is Your Bloody Valentine (1985), incorporated a further gothic rock sound which AllMusic referred to as "unfocused and derivative". However, when the band began experimenting with pop melodies on The New Record by My Bloody Valentine (1986), it marked "a vital point in the development of their sound",which was influenced primarily by The Jesus and Mary Chain. The band later took a "rarified, effete and poppy approach to Byrdsian rock" with their two successive releases, "Strawberry Wine" and Ecstasy (1987). Isn't Anything, and its preceding release You Made Me Realise (1988), were influenced by American indie rock bands, most notably Dinosaur Jr. and Sonic Youth, The band were also formatively influenced by house music as well as hip hop, of which Shields said "it beats the shit out of most rock music when it comes to being experimental, it's been a constant source of inspiration to us." In the mid-1990s, during the recording of m b v (2013), Kevin Shields and Colm Ó Cíosóig began experimenting with jungle and drum and bass music, an underground dance scene in London at the time.</p>
+                        <script>
+                            $("#Style").hide();
+                        </script>
+                        <label>show</label>
+                        <input type="checkbox" />
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="bandabout">
+                        <h2>Legacy</h2>
+                        <div id="div1">
+                            <p id="Legacy">
+                                My Bloody Valentine are regarded by some as the pioneers of the alternative rock subgenre known as shoegazing, a term coined by Sounds journalists in the 1990 to describe certain bands' "motionless performing style, where they stood on stage and stared at the floor". The band's releases on Creation Records influenced shoegazing acts, including Slowdive, Ride and Lush, and are regarded as providing a platform to allow the bands to become recognised. Following the release of Loveless (1991), My Bloody Valentine were "poised for a popular breakthrough", although never achieved mainstream success. However, the band are noted to have been "profoundly influential in the direction of '90s alternative rock", according to AllMusic. In 2017, a study of AllMusic's database indicated My Bloody Valentine as its 26th most frequently cited influence on other artists.
+                                Several alternative rock bands have cited My Bloody Valentine as an influence. The Smashing Pumpkins frontman Billy Corgan was influenced by Isn't Anything upon its release and attempted to recreate its sound on the band's debut album Gish (1991), particularly the closing track "Daydream" which Corgan described as "a complete rip-off of the My Bloody Valentine sound." The Smashing Pumpkins two successive studio albums, Siamese Dream (1993) and Mellon Collie and the Infinite Sadness (1995), were also influenced by the band.
+                            </p>
+                        </div>
+
+                        <button class="btn1">Click to fade out</button><button class="btn2">Click to fade in</button>
+                    </div>
+                </div>
+
+
+                <div class="col-md-4">
+                    <div class="bandabout">
+                        <h2>Members</h2>
+                        <h3>Current</h3>
+                        <p id="Lineup">
+                            Kevin Shields- vocals, guitar, sampler<br>
+                            (1983-97, 2007-present)<br>
+                            <br>
+                            Bilinda Butcher- vocals, guitar<br>
+                            (1987-97, 2007-present)<br>
+                            <br>
+                            Colm O'Ciosoig- drums, sampler<br>
+                            (1983-95, 2007-present)<br>
+                            <br>
+                            Debbie Googe- bass<br>
+                            (1983–84, 1985–95, 2007–present)<br>
+                        </p>
+                        <h3>Former</h3>
+                        <P>
+                            David Conway- vocals<br>
+                            (1983-87)<br>
+                            <br>
+                            Tina Durkin- keyboards<br>
+                            (1984-85)<br>
+                            <br>
+                            Stephen Ivers– guitar<br>
+                            (1983–84)<br>
+                            <br>
+                            Paul Murtagh– bass<br>
+                            (1983–84)<br>
+                            <br>
+                            Mark Ross– bass<br>
+                            (1983)<br>
+                        </P>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-12">
+        <div class="bandabout">
+            <h2>New Plugins Used</h2>
+            <h3>Owl Carousel2</h3>
+            <p>
+                Owl Carousel is jquery image carousel plugin it enables you to create a responsive and scalable touch enabled carousel.It supports CSS3 for fast and efficient loading but also has CSS2 fall back for older browsers.<br>
+                It requires only a couple files including three css files for styling and layout
+            </p>
+            <br>
+            <h3>Files Required</h3>
+            <br>
+            <h4>CSS</h4>
+            <p>
+                owl.carousel.css, owl.carousel.min.css, owl.theme.default.min.css
+            </p>
+            <h4>JS</h4>
+            <p>
+                owl.carousel.js, jquery.min.js
+            </p>
+            <br>
+            <h3>Parallax Scrolling</h3>
+            <br>
+            <p>
+                This plugin allows for background images that can scroll independantly of the actual webpage.
+            </p>
+            <br>
+            <h3>Files Used</h3>
+            <br>
+            <h4>JS</h4>
+            <p>
+                parallax.js, parallax.min.js
+            </p>
+
+        </div>
+    </div>
+
+</body>
+</html>

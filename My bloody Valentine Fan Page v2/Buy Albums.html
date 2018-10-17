@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Bloody Valentine</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/parallax.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">My Bloody Valentine</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Buy Albums</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Gallery</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Buy Albums.html">Buy Albums</a></li>
+                <li><a href="contact.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <script src='js/handlebars.min.js'></script>
+    <script>
+        $(document).ready(function () {
+            var data = {
+                title: "Album information",
+                albums: [
+                    {
+                        name: "LoveLess",
+                        released: "4 November 1991",
+                        comment: "Loveless is the second studio album",
+                    },
+                                    {
+                        name: "Isn't Anything",
+                        released: "21 November 1988",
+                        comment: "Isn't Anything is the debut full-length studio album",
+                    },
+                                    {
+                        name: "m b v",
+                        released: "2 February 2013",
+                        comment: "MBV (stylised as m b v) is the third studio album",
+                    }
+                ]
+            }
+
+            var template = $('#MBV-Albums').html();
+            var template = Handlebars.compile($("#MBV-Albums").html());
+            var html = template(data)
+            $(document.body).append(html);
+
+        });
+    </script>
+
+    <script id="MBV-Albums" type="text/x-handlebars-template">
+        <h1>{{title}}</h1>
+        <ul>
+            {{#each albums}}
+            <li>{{name}}</li>
+            <li>{{released}}</li>
+            <li>{{comment}}</li>
+            <br>
+            {{/each}}
+        </ul>
+    </script>
+
+    <button class="float-right btn btn-primary" id="btncall" data-toggle="modal" data-target="#modalForm">Add Album</button>
+
+<div class="modal fade" id ="modalForm"   role="dialog">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h1>Add Album</h1>
+</div>
+<div class= modal-body>
+<form name = 'emplist' id = "emplist" >
+
+</div>
+<div class="form-group row">
+<label for = "name" class="col-sm-3 col-form-label">Name</label>
+<div class="col-sm-9">
+<input type = "text" name="name" id="name" class="form-control" required pattern = "[A-Z][a-z]+( [A-Z][a-z]+)?" 
+                     title="Please enter the album name with First Letter capitalised">
+</div>
+</div>
+<div class="form-group row">
+<label for = "name" class="col-sm-3 col-form-label">Released</label>
+<div class="col-sm-9">
+<input type = "number" name="released" id="released" class="form-control" required pattern = "" 
+                     title="Please enter a release date in the format dd/mm/yy with First Letter capitalised">
+</div>
+</div>
+<div class="form-group row">
+<label for = "comment" class="col-sm-3 col-form-label">Comment</label>
+<div class="col-sm-9">
+<input type = "text" name="comment" id="comment" class="form-control" required pattern = "[A-Z][a-z]+" 
+                     title ="Please enter a comment with First Letter capitalised">
+</div>
+</div>
+<div class="form-group row">
+    <div class="col-sm-10">
+      <input type="submit" id="thesubmit" value="Add Album">
+    </div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+
+<script type="text/javascript">
+
+$('#emplist').submit(function() {
+  newemp= {
+     name:$('#name').val(),
+     released:$('#released').val(),
+     comment:$('#comment').val()
+  }
+  console.log(newemp);
+  data.push(newemp);
+  var theCompiledHtml = template(data);
+  $("#content-placeholder").html(theCompiledHtml);
+  $('input[type="text"]').each(function() {
+        $(this).val("");
+  });
+  $('input[type="email"]').val("");
+  return false;
+});
+
+</script>
+
+</body>
+</html>
